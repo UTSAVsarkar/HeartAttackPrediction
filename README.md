@@ -1,4 +1,4 @@
-# Heart Disease Prediction Dataset
+# Heart Disease Prediction
 
 **Description:**
 
