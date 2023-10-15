@@ -4,6 +4,34 @@ import seaborn as sns
 import streamlit as st
 
 def explore_page():
+    st.subheader("""         
+        Embark on a Journey of Discovery 🚀: Explore the Hidden Insights within the Data 💎
+
+        Dive into the Heart Disease Prediction Dataset and unveil the secrets concealed within. Let the data be your compass as you navigate through the intricate web of health attributes, and unlock the power of prediction and early detection.
+
+        🔍 Delve deep into the patient's age, gender, and health metrics.
+                 
+
+        📊 Chart a course through exercise-induced symptoms and diagnostic results.
+                 
+
+
+        🌟 Uncover the patterns that illuminate the path to heart health.
+                 
+
+
+        🤝 Join hands with data to make informed decisions in the realm of cardiology.
+                 
+
+
+
+        Are you ready to explore, analyze, and make a difference? Your journey begins now. 
+                 
+        Happy exploring! 🌠💼📈
+             """)
+    
+    st.subheader('', divider='rainbow')
+
     dataset = pd.read_csv('heart.csv')
 
     st.write("""### Proportion of Chance of Heart Attack""")
@@ -15,7 +43,7 @@ def explore_page():
     plt.ylabel("Proportion")
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Distribution of Age""")
     sns.set_style('whitegrid')
@@ -29,7 +57,7 @@ def explore_page():
     fig.suptitle('Distribution of Age', fontsize=18, fontweight='bold')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Proportion of Chance of Heart Attack""")
     age_prop = dataset.groupby('age')['output'].mean()
@@ -50,7 +78,7 @@ def explore_page():
     ax.text(age_prop.index[-1], avg_prop+0.02, f'Avg. Proportion: {avg_prop:.2f}', ha='right', fontsize=12, color='red')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Chance of Heart Attack by Chest Pain type""")
     colors = ["#537AE3", "#90E353"]
@@ -70,7 +98,7 @@ def explore_page():
             plt.text(i, cross_tab.iloc[i, :j+1].sum() - 0.05, str(round(cross_tab.iloc[i, j]*100,1)) + '%', ha='center', va='top', fontsize=12, fontweight='bold', color='white')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Chance of Heart Attack vs resting electrocardiographic results""")
     colors = ["#537AE3", "#90E353"]
@@ -90,7 +118,7 @@ def explore_page():
             plt.text(i, cross_tab.iloc[i, :j+1].sum() - 0.05, str(round(cross_tab.iloc[i, j]*100,1)) + '%', ha='center', va='top', fontsize=12, fontweight='bold', color='white')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Chance of Heart Attack vs Gender""")
     colors = ["#537AE3", "#90E353"]
@@ -109,7 +137,7 @@ def explore_page():
             plt.text(i, cross_tab.iloc[i, :j+1].sum() - 0.05, str(round(cross_tab.iloc[i, j]*100,1)) + '%', ha='center', va='top', fontsize=12, fontweight='bold', color='white')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Chance of Heart Attack vs Exercise Induced Angina""")
     colors = ["#537AE3", "#90E353"]
@@ -129,7 +157,7 @@ def explore_page():
             plt.text(i, cross_tab.iloc[i, :j+1].sum() - 0.05, str(round(cross_tab.iloc[i, j]*100,1)) + '%', ha='center', va='top', fontsize=12, fontweight='bold', color='white')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Chance of Heart Attack by number of major vessels""")
     colors = ["#537AE3", "#90E353"]
@@ -148,7 +176,7 @@ def explore_page():
             plt.text(i, cross_tab.iloc[i, :j+1].sum() - 0.05, str(round(cross_tab.iloc[i, j]*100,1)) + '%', ha='center', va='top', fontsize=12, fontweight='bold', color='white')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Chance of Heart Attack by fasting blood sugar > 120 mg/dl""")
     colors = ["#537AE3", "#90E353"]
@@ -168,7 +196,7 @@ def explore_page():
             plt.text(i, cross_tab.iloc[i, :j+1].sum() - 0.05, str(round(cross_tab.iloc[i, j]*100,1)) + '%', ha='center', va='top', fontsize=12, fontweight='bold', color='white')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Correlations with 'output'""")
     limit = -1.0
@@ -185,7 +213,7 @@ def explore_page():
     plt.title('Correlations with "output"')
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')
 
     st.write("""### Relationship between Age and Chance of Heart Attack""")
     age_grouped = dataset.groupby('age')['output'].mean()
@@ -199,4 +227,4 @@ def explore_page():
     plt.yticks(fontsize=10)
     st.pyplot(plt.gcf())
 
-    st.divider()
+    st.subheader('', divider='rainbow')

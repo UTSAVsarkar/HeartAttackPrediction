@@ -20,8 +20,7 @@ def about():
 **Purpose:** The dataset is commonly used for training machine learning models to predict the risk of heart disease in patients based on their health attributes. Researchers and healthcare professionals may use this dataset to develop predictive models for early heart disease detection.             
                """)
         
-        st.divider()
-
+        st.subheader('', divider='rainbow')
         
         st.write("""### 
                  
@@ -47,3 +46,5 @@ def about():
 - Investigate the impact of different features, such as age, gender, blood pressure, and cholesterol, on heart disease risk.
 - Create data-driven insights to support clinical decision-making and public health initiatives.
                  """)
+        
+        st.subheader('', divider='rainbow')
