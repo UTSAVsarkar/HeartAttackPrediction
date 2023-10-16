@@ -26,3 +26,5 @@ The Heart Disease Prediction Dataset is a collection of health-related attribute
 
 **Dataset Source:**
 The source of this dataset may include medical records, clinical studies, or surveys in the field of cardiology and healthcare.
+
+App Link: https://heartattackprediction.streamlit.app/
