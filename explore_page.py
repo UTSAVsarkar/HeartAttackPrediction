@@ -11,20 +11,12 @@ def explore_page():
 
         🔍 Delve deep into the patient's age, gender, and health metrics.
                  
-
         📊 Chart a course through exercise-induced symptoms and diagnostic results.
                  
-
-
         🌟 Uncover the patterns that illuminate the path to heart health.
                  
-
-
         🤝 Join hands with data to make informed decisions in the realm of cardiology.
                  
-
-
-
         Are you ready to explore, analyze, and make a difference? Your journey begins now. 
                  
         Happy exploring! 🌠💼📈
